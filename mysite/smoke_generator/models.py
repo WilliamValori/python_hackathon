@@ -9,3 +9,6 @@ class Recipe(models.Model):
     ingredients_txt = models.TextField()
     image_img = models.ImageField()
     description_txt = models.TextField()
+
+    def __str__(self):
+        return self.title

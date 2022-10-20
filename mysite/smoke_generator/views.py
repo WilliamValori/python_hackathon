@@ -9,6 +9,8 @@ from django.template import loader
 
 # def index(request):
 #     return HttpResponse("Hello, world. You're at the meat up!.")
+from smoke_generator.models import Recipe
+
 
 def index(request):
     latest_question_list = ["Heb je trek?", "Wat gaat erop?"]
@@ -32,5 +34,9 @@ def recipe(request):
     return HttpResponse("The recipe name is spare_ribs")
 
 def test(request):
-    return render(request, "page2.html")
+    obj = Recipe.objects.all()
+
+    context = {"object": obj}
+
+    return render(request, "page2.html",context)
  

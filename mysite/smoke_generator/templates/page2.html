@@ -5,5 +5,28 @@
 <h1>My First Heading</h1>
 <p>My first asdfasdparagraph.</p>
 
+{% block title %} Home {% endblock %}
+
+
+{% block body %}
+<hr/>
+
+{% for recipe in object %}
+
+<div>
+    <h1>{{recipe.name_txt}}</h1>
+    <h3>{{recipe.ingredients_txt}}</h3>
+    <p>{{recipe.image_img}}</p>
+   <hr/>
+
+
+</div>
+
+{% endfor %}
+
+
+{% endblock %}
+
+
 </body>
 </html>
