@@ -29,5 +29,8 @@ def vote(request, question_id):
     return HttpResponse("You're voting on question %s." % question_id)
 
 def recipe(request):
-    return HttpResponse("The recipe name is spare_ribs")    
+    return HttpResponse("The recipe name is spare_ribs")
+
+def test(request):
+    return render(request, "page2.html")
  

@@ -16,7 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from smoke_generator import views
+
 urlpatterns = [
     path('smoke_generator/', include('smoke_generator.urls')),
     path('admin/', admin.site.urls),
+    path('test', views.test)
 ]

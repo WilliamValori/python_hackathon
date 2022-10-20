@@ -12,5 +12,5 @@ urlpatterns = [
     # ex: /smoke_generator/5/vote/
     path('<int:question_id>/vote/', views.vote, name='vote'),
     # ex: /smoke_generator/spare_ribs
-    path('spare_ribs/', views.recipe, name='recipe')
+    path('spare_ribs/', views.recipe, name='recipe'),
 ]
